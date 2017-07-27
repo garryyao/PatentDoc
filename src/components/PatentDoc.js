@@ -8,6 +8,7 @@ import '../utils/anchor-scroll';
 
 import React from 'react'
 import PatentDocType from './Types'
+import PatentBasic from './PatentBasic'
 
 class PatentDoc extends React.Component {
   render() {
@@ -16,77 +17,7 @@ class PatentDoc extends React.Component {
       <div className="row">
 
         <div className="col-lg-4 hidden-md-down">
-
-          {/* Basic infos */}
-          <div className="card sticky-top card-patent-basic">
-            <div className="card-block card-inverse bg-primary">
-              <h2 className="card-title">US-19960903-A</h2>
-              <h4 className="card-subtitle">No. 5551212</h4>
-            </div>
-
-            <div className="card-block card-block-compact">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item justify-content-between">
-                  <h5 className="card-title">
-                    Inventors:
-                  </h5>
-                  <span className="icon icon-inventor"/>
-                </li>
-                <li className="list-group-item justify-content-between">
-                  <span className="display-name">ODENTHAL; HEINZ F.</span>
-                  <span className="address">US</span>
-                </li>
-                <li className="list-group-item justify-content-between">
-                  <span className="display-name">Heinz F. Odenthal</span>
-                  <span className="address">Zulpich, DE</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="card-block card-block-compact">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item justify-content-between">
-                  <h5 className="card-title">Assignee:</h5>
-                  <span className="icon icon-assignee"/>
-                </li>
-                <li className="list-group-item">OSTMA MASCHINENBAU GMBH</li>
-              </ul>
-            </div>
-
-            <div className="card-block card-block-compact">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item justify-content-between">
-                  <h5 className="card-title">
-                    Agents:
-                  </h5>
-                  <span className="icon icon-agents"/>
-                </li>
-                <li className="list-group-item">Herbert Dubno</li>
-                <li className="list-group-item">Andrew Wilford</li>
-              </ul>
-            </div>
-
-            <div className="card-block card-block-compact">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item justify-content-between">
-                  <h5 className="card-title">Applicants:</h5>
-                  <span className="icon icon-applicant"/>
-                </li>
-                <li className="list-group-item">OSTMA MASCHINENBAU GMBH</li>
-                <li className="list-group-item">OSTMA MASCHINENBAU GMBH</li>
-              </ul>
-            </div>
-
-            <div className="card-block card-block-compact">
-              <ul className="list-group list-group-flush">
-                <li className="list-group-item justify-content-between">
-                  <h5 className="card-title">Examiners:</h5>
-                  <span className="icon icon-examinee"/>
-                </li>
-                <li className="list-group-item">Linda Johnson, US</li>
-              </ul>
-            </div>
-          </div>
+          <PatentBasic sticky document={doc} />
         </div>
 
         <div className="col-lg-8 col">
@@ -95,89 +26,7 @@ class PatentDoc extends React.Component {
             {/* Basic info*/}
             <div className="row">
               <div className="col hidden-lg-up">
-
-                <div className="card card-patent-basic">
-                  <div className="card-block card-inverse bg-primary">
-                    <h2 className="card-title">US-19960903-A</h2>
-                    <h4 className="card-subtitle">No. 5551212</h4>
-                  </div>
-
-                  <div className="card-block card-block-compact">
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item justify-content-between">
-                        <h5 className="card-title">
-                          Inventors:
-                        </h5>
-                        <span className="icon icon-inventor"/>
-                      </li>
-                      <li className="list-group-item justify-content-between">
-                        <span className="display-name">ODENTHAL; HEINZ F.</span>
-                        <span className="address">US</span>
-                      </li>
-                      <li className="list-group-item justify-content-between">
-                        <span className="display-name">Heinz F. Odenthal</span>
-                        <span className="address">Zulpich, DE</span>
-                      </li>
-                      <li className="list-group-item justify-content-between">
-                        <span className="display-name">Heinz F. Odenthal</span>
-                        <span className="address">Zulpich, DE</span>
-                      </li>
-                      <li className="list-group-item justify-content-between">
-                        <span className="display-name">Heinz F. Odenthal</span>
-                        <span className="address">Zulpich, DE</span>
-                      </li>
-                      <li className="list-group-item justify-content-between">
-                        <span className="display-name">Heinz F. Odenthal</span>
-                        <span className="address">Zulpich, DE</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="card-block card-block-compact">
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item justify-content-between">
-                        <h5 className="card-title">Assignee:</h5>
-                        <span className="icon icon-assignee"/>
-                      </li>
-                      <li className="list-group-item">OSTMA MASCHINENBAU GMBH</li>
-                    </ul>
-                  </div>
-
-                  <div className="card-block card-block-compact">
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item justify-content-between">
-                        <h5 className="card-title">
-                          Agents:
-                        </h5>
-                        <span className="icon icon-agents"/>
-                      </li>
-                      <li className="list-group-item">Herbert Dubno</li>
-                      <li className="list-group-item">Andrew Wilford</li>
-                    </ul>
-                  </div>
-
-                  <div className="card-block card-block-compact">
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item justify-content-between">
-                        <h5 className="card-title">Applicants:</h5>
-                        <span className="icon icon-applicant"/>
-                      </li>
-                      <li className="list-group-item">OSTMA MASCHINENBAU GMBH</li>
-                      <li className="list-group-item">OSTMA MASCHINENBAU GMBH</li>
-                    </ul>
-                  </div>
-
-                  <div className="card-block card-block-compact">
-                    <ul className="list-group list-group-flush">
-                      <li className="list-group-item justify-content-between">
-                        <h5 className="card-title">Examiners:</h5>
-                        <span className="icon icon-examinee"/>
-                      </li>
-                      <li className="list-group-item">Linda Johnson, US</li>
-                    </ul>
-                  </div>
-                </div>
-
+                <PatentBasic document={doc}/>
               </div>
             </div>
 
