@@ -1,0 +1,83 @@
+@import "variables";
+
+@font-face {
+  font-family: 'iconpack';
+  src:
+    url('#{$icomoon-font-path}/iconpack.ttf?a51kte') format('truetype'),
+    url('#{$icomoon-font-path}/iconpack.woff?a51kte') format('woff'),
+    url('#{$icomoon-font-path}/iconpack.svg?a51kte#iconpack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconpack' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-description {
+  &:before {
+    content: $icon-description;
+  }
+}
+.icon-abstract {
+  &:before {
+    content: $icon-abstract;
+  }
+}
+.icon-claim {
+  &:before {
+    content: $icon-claim;
+  }
+}
+.icon-patent {
+  &:before {
+    content: $icon-patent;
+  }
+}
+.icon-agents {
+  &:before {
+    content: $icon-agents;
+  }
+}
+.icon-favicon {
+  &:before {
+    content: $icon-favicon;
+  }
+}
+.icon-barcode {
+  &:before {
+    content: $icon-barcode;
+  }
+}
+.icon-inventor {
+  &:before {
+    content: $icon-inventor;
+  }
+}
+.icon-applicant {
+  &:before {
+    content: $icon-applicant;
+  }
+}
+.icon-examinee {
+  &:before {
+    content: $icon-examinee;
+  }
+}
+.icon-assignee {
+  &:before {
+    content: $icon-assignee;
+  }
+}
+
