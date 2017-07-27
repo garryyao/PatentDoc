@@ -1,0 +1,144 @@
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "theme";
+@import "~bootstrap/scss/normalize";
+
+// Core CSS
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+
+// Components
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/nav";
+
+// Utilities
+@import "~bootstrap/scss/utilities/spacing";
+@import "~bootstrap/scss/utilities/align";
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/utilities/background";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/float";
+@import "~bootstrap/scss/utilities/position";
+@import "~bootstrap/scss/utilities/sizing";
+@import "~bootstrap/scss/utilities/spacing";
+@import "~bootstrap/scss/utilities/visibility";
+
+body {
+  position: relative;
+}
+
+#navbar-top {
+  height: 60px;
+  top: -1px
+}
+
+.card-patent-basic {
+  margin-top: 20px;
+
+  &.sticky-top {
+    min-width: 300px;
+    max-width: 100%;
+    margin-top: 0;
+    top: 60px;
+    float: right;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .list-group-item {
+    font-size: $font-size-sm;
+  }
+
+  .address {
+    color: $gray-light;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  @include media-breakpoint-down(md) {
+
+    .card-block-compact {
+      padding: $spacer*.25 0;
+    }
+
+    .list-group {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .list-group-item {
+      padding: $spacer*.5;
+      border: 0 none;
+      flex-wrap: nowrap;
+
+      &:first-child {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .icon {
+      &:before {
+        width: $spacer*2;
+        display: inline-block;
+        text-align: center;
+        margin-right: $spacer*.5
+      }
+    }
+
+    .address {
+      margin-left: $spacer*.5
+    }
+  }
+}
+
+.card-block-compact {
+  padding: 0;
+  .card-title {
+    margin-bottom: 0;
+  }
+}
+
+.navbar-brand {
+  .icon {
+    font-size: 2rem;
+  }
+}
+
+.card-light {
+  border: 0 none;
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .card-header {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .card-title {
+    margin: 0;
+  }
+}
+
+.copyright {
+  font-size: $font-size-sm;
+  color: $gray-light;
+
+  &:before {
+    content: "\00a9 copyright";
+    font-weight: bold;
+  }
+}

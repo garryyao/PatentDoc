@@ -1,4 +1,5 @@
 import React from 'react';
+import PatentDoc from './PatentDoc'
 
 export default class AppComponent extends React.Component {
   constructor(props) {
@@ -23,6 +24,13 @@ export default class AppComponent extends React.Component {
 
   render() {
     let doc = this.state.pantentData
+    if (doc) {
+      if (doc instanceof Error) {
+        return <div>`Problem retrieving patent data with error: ${doc.message}`</div>
+      } else {
+        return <PatentDoc document={doc} />
+      }
+    }
     return <div>Loading...</div>
   }
 }

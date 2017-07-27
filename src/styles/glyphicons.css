@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'iconpack';
+  src:
+    url('fonts/iconpack.ttf?ofkv55') format('truetype'),
+    url('fonts/iconpack.woff?ofkv55') format('woff'),
+    url('fonts/iconpack.svg?ofkv55#iconpack') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconpack' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-agents:before {
+  content: "\e90f";
+}
+.icon-author:before {
+  content: "\e910";
+}
+.icon-claim:before {
+  content: "\e900";
+}
+.icon-patent .path1:before {
+  content: "\e901";
+  color: rgb(255, 255, 255);
+}
+.icon-patent .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-patent .path3:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(199, 246, 254);
+}
+.icon-patent .path4:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(199, 246, 254);
+}
+.icon-patent .path5:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-patent .path6:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(199, 246, 254);
+}
+.icon-patent .path7:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-patent .path8:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(55, 77, 101);
+}
+.icon-patent .path9:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(55, 77, 101);
+}
+.icon-patent .path10:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(55, 77, 101);
+}
+.icon-patent .path11:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(55, 77, 101);
+}
+.icon-favicon:before {
+  content: "\e90d";
+}
+.icon-barcode:before {
+  content: "\e90c";
+}
