@@ -18,12 +18,12 @@ const Contact = Shape({
   '_seq': Number,
   'addressbook': Shape({
     '_seq': Number,
-    'optionalAddress': {
+    'optionalAddress': Shape({
       '_seq': Number,
       'country': TextNode
-    },
-    'optionalFirstName': TextNode,
-    'optionalLastName': TextNode
+    }),
+    'first-name': TextNode,
+    'last-name': TextNode
   })
 })
 
@@ -47,11 +47,11 @@ const PantentDoc = Shape({
       }),
       'assignees': Shape({
         '_seq': Number,
-        'assignee': arrayOf(Contact)
+        'assignee': Contact
       }),
       'examiners': Shape({
         '_seq': Number,
-        'examiner': arrayOf(Contact)
+        'examiner': Contact
       }),
       'inventors': Shape({
         '_seq': Number,
@@ -62,7 +62,7 @@ const PantentDoc = Shape({
   'claims': Shape({
     '_seq': Number,
     'claim': arrayOf(Shape({
-      '-num': Number,
+      '-num': String,
       '_seq': Number,
       'claim-text': TextNode
     })),

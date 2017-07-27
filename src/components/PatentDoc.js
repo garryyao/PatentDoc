@@ -366,7 +366,7 @@ class PatentDoc extends React.Component {
     </div>
   }
 }
-PatentDoc.propsType = {
+PatentDoc.propTypes = {
   document: PatentDocType
 }
 export default PatentDoc
