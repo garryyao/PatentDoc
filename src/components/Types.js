@@ -13,7 +13,12 @@ const Paragraph = Shape({
   '_seq': Number
 })
 
-const Contact = Shape({
+export const NavItemsType = arrayOf(Shape({
+  'target': String,
+  'title': String
+}))
+
+export const ContactType = Shape({
   '-sequence': String,
   '_seq': Number,
   'addressbook': Shape({
@@ -26,60 +31,59 @@ const Contact = Shape({
     'last-name': TextNode
   })
 })
-
-const PantentDoc = Shape({
+export const ClaimsType = Shape({
+  '_seq': Number,
+  'claim': arrayOf(Shape({
+    '-num': String,
+    '_seq': Number,
+    'claim-text': TextNode
+  })),
+  'claim-statement': TextNode
+})
+export const DescType = Shape({
+  '-lang': String,
+  '_seq': Number,
+  'heading': arrayOf(TextNode),
+  'p': arrayOf(TextNode)
+})
+export const CopyrightType = TextNode
+export const AbstractType = Paragraph
+export const PatentBio = Shape({
+  '_seq': Number,
+  'parties': Shape({
+    'agents': Shape({
+      '_seq': Number,
+      'agent': arrayOf(ContactType)
+    }),
+    'applicants': Shape({
+      '_seq': Number,
+      'applicant': arrayOf(ContactType)
+    }),
+    'assignees': Shape({
+      '_seq': Number,
+      'assignee': ContactType
+    }),
+    'examiners': Shape({
+      '_seq': Number,
+      'examiner': ContactType
+    }),
+    'inventors': Shape({
+      '_seq': Number,
+      'inventor': arrayOf(ContactType)
+    })
+  })
+})
+const PantentDocType = Shape({
   '-ucid': String,
   '-country': String,
   '-date': String,
   '-doc-number': String,
   '-kind': String,
   'abstract': PropTypes.object,
-  'bibliographic-data': Shape({
-    '_seq': Number,
-    'parties': Shape({
-      'agents': Shape({
-        '_seq': Number,
-        'agent': arrayOf(Contact)
-      }),
-      'applicants': Shape({
-        '_seq': Number,
-        'applicant': arrayOf(Contact)
-      }),
-      'assignees': Shape({
-        '_seq': Number,
-        'assignee': Contact
-      }),
-      'examiners': Shape({
-        '_seq': Number,
-        'examiner': Contact
-      }),
-      'inventors': Shape({
-        '_seq': Number,
-        'inventor': arrayOf(Contact)
-      })
-    })
-  }),
-  'claims': Shape({
-    '_seq': Number,
-    'claim': arrayOf(Shape({
-      '-num': String,
-      '_seq': Number,
-      'claim-text': TextNode
-    })),
-    'claim-statement': TextNode
-  }),
-  'abstract': Paragraph,
-  'copyright': Shape({
-    'claim': arrayOf(Shape({
-      'claim-text': TextNode
-    }))
-  }),
-  'description': Shape({
-    '-lang': String,
-    '_seq': Number,
-    'heading': arrayOf(TextNode),
-    'p': arrayOf(TextNode)
-  })
+  'bibliographic-data': PatentBio,
+  'claims': ClaimsType,
+  'abstract': AbstractType,
+  'copyright': CopyrightType,
+  'description': DescType
 })
-
-export default PantentDoc
+export default PantentDocType
