@@ -1,5 +1,6 @@
 import React from 'react';
 import PatentDoc from './PatentDoc'
+const config = require('config').default;
 
 export default class AppComponent extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ export default class AppComponent extends React.Component {
     }
   }
   componentWillMount() {
-    fetch('//localhost:3000/patent-document')
+    fetch(config.apiUrl)
     .then((res) => res.json())
     .then(data => {
       this.setState({

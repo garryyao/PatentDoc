@@ -3,7 +3,7 @@
 import baseConfig from './base';
 
 let config = {
-  appEnv: 'dist'  // feel free to remove the appEnv property here
+  apiUrl: 'https://raw.githubusercontent.com/garryyao/PatentDoc/master/assets/patent.json'
 };
 
 export default Object.freeze(Object.assign({}, baseConfig, config));
