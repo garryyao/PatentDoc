@@ -170,6 +170,14 @@ body {
   }
 }
 
+.patent-body {
+  transform: translateY(0);
+  &.showing {
+    transform: translateY(200px);
+  }
+  transition: transform 1.2s cubic-bezier(0.190, 1.000, 0.220, 1.000)
+}
+
 .navbar-brand {
   .icon {
     font-size: 2rem;

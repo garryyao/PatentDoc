@@ -3496,7 +3496,7 @@ lodash.isarray@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
 
-lodash.keys@^3.0.0:
+lodash.keys@^3.0.0, lodash.keys@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/lodash.keys/-/lodash.keys-3.1.2.tgz#4dbc0472b156be50a0b286855d1bd0b0c656098a"
   dependencies:
@@ -4655,6 +4655,12 @@ react-hot-loader@^1.2.9:
     react-hot-api "^0.4.5"
     source-map "^0.4.4"
 
+react-loading-bar@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-loading-bar/-/react-loading-bar-0.0.4.tgz#4573fe36ed60fb768f34e16a79d653cbb5478126"
+  dependencies:
+    shallowequal "^0.2.2"
+
 react@^15.0.0:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.1.tgz#baa8434ec6780bde997cdc380b79cd33b96393df"
@@ -5094,6 +5100,12 @@ shallow-clone@^0.1.2:
     kind-of "^2.0.1"
     lazy-cache "^0.2.3"
     mixin-object "^2.0.1"
+
+shallowequal@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-0.2.2.tgz#1e32fd5bcab6ad688a4812cb0cc04efc75c7014e"
+  dependencies:
+    lodash.keys "^3.1.2"
 
 shelljs@^0.7.5:
   version "0.7.8"

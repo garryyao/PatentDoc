@@ -6,6 +6,7 @@ import 'jquery';
 import 'bootstrapjs';
 
 import React from 'react'
+import classNames from 'classnames'
 import PatentDocType from './Types'
 import PatentBasic from './PatentBasic'
 import PatentAbstract from './PatentAbstract'
@@ -15,6 +16,15 @@ import PatentCopyright from './PatentCopyright'
 import NavBar from './NavBar'
 
 class PatentDoc extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {mounted: false}
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({mounted: true})
+    })
+  }
   render() {
     const doc = this.props.document;
     return <div className="container-fluid">
@@ -39,7 +49,7 @@ class PatentDoc extends React.Component {
               {title: 'description', target: 'desc'}
             ]}/>
 
-            <div className="row">
+            <div className={classNames('row', 'patent-body', {'showing': !this.state.mounted})}>
               <div className="col">
                 <PatentAbstract abstract={doc.abstract}/>
                 <PatentClaims claims={doc.claims}/>
