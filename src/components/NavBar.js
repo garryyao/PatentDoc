@@ -1,5 +1,6 @@
 import React from 'react'
 import {NavItemsType} from './Types'
+import scroll from '../utils/SmoothScroll'
 
 class NavBar extends React.Component {
 
@@ -20,13 +21,19 @@ class NavBar extends React.Component {
         <ul className="navbar-nav">
           {this.props.navItems.map((item, i) => {
             return <li key={i} className="nav-item">
-              <a className="scroll nav-link" href={`#${item.target}`}>{item.title}</a>
+              <a className="scroll nav-link" href={`#${item.target}`} onClick={this.handleClick}>{item.title}</a>
             </li>
           })}
         </ul>
       </div>
     </nav>
   }
+
+  handleClick(e) {
+    scroll(e.target)
+    e.preventDefault()
+  }
+
 }
 
 NavBar.propTypes = {

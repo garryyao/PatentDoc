@@ -4,7 +4,6 @@ import 'styles/PatentDoc.scss';
 import 'tether';
 import 'jquery';
 import 'bootstrapjs';
-import '../utils/anchor-scroll';
 
 import React from 'react'
 import PatentDocType from './Types'
