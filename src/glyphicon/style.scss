@@ -3,9 +3,9 @@
 @font-face {
   font-family: 'iconpack';
   src:
-    url('#{$icomoon-font-path}/iconpack.ttf?a51kte') format('truetype'),
-    url('#{$icomoon-font-path}/iconpack.woff?a51kte') format('woff'),
-    url('#{$icomoon-font-path}/iconpack.svg?a51kte#iconpack') format('svg');
+    url('#{$icomoon-font-path}/iconpack.ttf?h5w63w') format('truetype'),
+    url('#{$icomoon-font-path}/iconpack.woff?h5w63w') format('woff'),
+    url('#{$icomoon-font-path}/iconpack.svg?h5w63w#iconpack') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,14 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-abstract {
+  &:before {
+    content: $icon-summary;
+  }
+}
 .icon-description {
   &:before {
     content: $icon-description;
-  }
-}
-.icon-abstract {
-  &:before {
-    content: $icon-abstract;
   }
 }
 .icon-claim {
@@ -47,7 +47,7 @@
 }
 .icon-agent {
   &:before {
-    content: $icon-agents;
+    content: $icon-agent;
   }
 }
 .icon-favicon {
@@ -70,7 +70,7 @@
     content: $icon-applicant;
   }
 }
-.icon-examinee {
+.icon-examiner {
   &:before {
     content: $icon-examinee;
   }
