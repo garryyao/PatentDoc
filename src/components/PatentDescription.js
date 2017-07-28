@@ -1,8 +1,6 @@
 import React from 'react'
 import {DescType} from './Types'
-import {textFromNode, sortSeq} from './Utils'
-let sortBy = require('lodash.sortby')
-let classNames = require('classnames')
+import {textFromNode, sortSeq} from '../utils/Utils'
 
 class PatentDescription extends React.Component {
 

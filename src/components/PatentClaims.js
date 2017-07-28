@@ -1,7 +1,6 @@
 import React from 'react'
 import {ClaimsType} from './Types'
-import {textFromNode, sortSeq} from './Utils'
-let classNames = require('classnames')
+import {textFromNode, sortSeq} from '../utils/Utils'
 
 class PatentClaims extends React.Component {
 

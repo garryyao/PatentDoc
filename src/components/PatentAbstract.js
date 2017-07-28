@@ -1,8 +1,6 @@
 import React from 'react'
 import {AbstractType} from './Types'
-import {textFromNode} from './Utils'
-let sortBy = require('lodash.sortby')
-let classNames = require('classnames')
+import {textFromNode} from '../utils/Utils'
 
 class PatentAbstract extends React.Component {
 

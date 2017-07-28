@@ -1,6 +1,6 @@
 import React from 'react'
 import {CopyrightType} from './Types'
-import {textFromNode} from './Utils'
+import {textFromNode} from '../utils/Utils'
 
 class PatentCopyright extends React.Component {
 

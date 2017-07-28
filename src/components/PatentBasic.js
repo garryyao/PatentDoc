@@ -1,7 +1,7 @@
 import React from 'react'
 import PatentDocType from './Types'
 import PropTypes from 'prop-types'
-import {textFromNode, safeJoin} from './Utils'
+import {textFromNode, safeJoin} from '../utils/Utils'
 let sortBy = require('lodash.sortby')
 let classNames = require('classnames')
 
@@ -48,7 +48,6 @@ class PatentBasic extends React.Component {
       {/* Patent parties*/}
       {parties.map(function(party) {
 
-        //console.log(`party: ${party._seq}`);
 
         return <div key={party._seq} className="card-block card-block-compact d-flex flex-row flex-lg-column justify-content-start">
           <div className="card-title-block header d-flex flex-row justify-content-between">
@@ -68,7 +67,7 @@ class PatentBasic extends React.Component {
               if (address) {
                 displayAddress = safeJoin(textFromNode(address.city), textFromNode(address.country))(',')
               }
-              //console.log(`contact: ${contact._seq}`);
+
               return <li key={contact._seq} className="list-group-item justify-content-between">
                 <span className="display-name">{displayName}</span>
                 <span className="address">{displayAddress}</span>

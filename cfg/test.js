@@ -41,12 +41,15 @@ module.exports = {
   resolve: {
     extensions: [ '', '.js', '.jsx' ],
     alias: {
+      jquery: 'jquery/src/jquery',
+      bootstrapjs: 'bootstrap/dist/js/bootstrap',
       actions: srcPath + 'actions/',
       helpers: path.join(__dirname, '/../test/helpers'),
       components: srcPath + 'components/',
       sources: srcPath + 'sources/',
       stores: srcPath + 'stores/',
       styles: srcPath + 'styles/',
+      glyphicon: srcPath + 'glyphicon/',
       config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
     }
   },
