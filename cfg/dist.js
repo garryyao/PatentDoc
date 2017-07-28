@@ -8,7 +8,7 @@ let defaultSettings = require('./defaults');
 
 // Add needed plugins here
 let BowerWebpackPlugin = require('bower-webpack-plugin');
-
+baseConfig.output.publicPath = '/PatentDoc/assets/'
 let config = Object.assign({}, baseConfig, {
   entry: path.join(__dirname, '../src/index'),
   cache: false,
@@ -28,7 +28,6 @@ let config = Object.assign({}, baseConfig, {
   ],
   module: defaultSettings.getDefaultModules()
 });
-
 // Add needed loaders to the defaults here
 config.module.loaders.push({
   test: /\.(js|jsx)$/,

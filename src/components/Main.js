@@ -14,7 +14,7 @@ export default class AppComponent extends React.Component {
     .then((res) => res.json())
     .then(data => {
       this.setState({
-        pantentData: data
+        pantentData: data['patent-document'] || data
       })
     }).catch(err => {
       this.setState({
