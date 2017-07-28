@@ -38,24 +38,27 @@ class PatentBasic extends React.Component {
       {/* Patent title block */}
       <div className="card-block card-inverse bg-primary">
         <h2 className="card-title">{doc['-ucid']}</h2>
-        <h4 className="card-subtitle">No. {doc['-doc-number']}</h4>
+        <h4 className="card-subtitle">
+          <span className="icon-barcode mr-2 align-middle"></span>
+          <span>No. {doc['-doc-number']}</span>
+        </h4>
       </div>
+      <div className="py-2 hidden-sm-up" />
 
       {/* Patent parties*/}
       {parties.map(function(party) {
 
         //console.log(`party: ${party._seq}`);
 
-        return <div key={party._seq} className="card-block card-block-compact">
+        return <div key={party._seq} className="card-block card-block-compact d-flex flex-row flex-lg-column justify-content-start">
+          <div className="card-title-block header d-flex flex-row justify-content-between">
+            <h5 className="card-title">
+              {party.typePlural}
+            </h5>
+            <span className={'icon icon-' + party.type} title={party.typePlural} />
+          </div>
           <ul className="list-group list-group-flush">
-            <li className="list-group-item justify-content-between">
-              <h5 className="card-title">
-                {party.typePlural}
-              </h5>
-              <span className={'icon icon-'+party.type} />
-            </li>
             {party.contacts.map(contact => {
-
               const addressbook = contact['addressbook']
               const displayName = addressbook['name']
                 ? textFromNode(addressbook['name'])
@@ -74,6 +77,7 @@ class PatentBasic extends React.Component {
           </ul>
         </div>
       })}
+      <div className="py-2 hidden-sm-up"/>
     </div>
   }
 }

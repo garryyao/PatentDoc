@@ -5,16 +5,10 @@ import scroll from '../utils/SmoothScroll'
 class NavBar extends React.Component {
 
   render() {
-    return <nav id="navbar-top" className="navbar navbar-toggleable navbar-light bg-faded sticky-top">
-      <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-              data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-              aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"/>
-      </button>
-
+    return <nav id="navbar-top" className="navbar navbar-light bg-faded sticky-top">
       <a className="navbar-brand" href="#">
         <span className="icon icon-patent align-middle pr-1"/>
-        <span>Patent Details</span>
+        <span className="hidden-sm-down">Patent Details</span>
       </a>
 
       <div className="collapse navbar-collapse">

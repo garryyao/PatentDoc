@@ -37,9 +37,32 @@ body {
   position: relative;
 }
 
+.container, .container-fluid {
+  @include media-breakpoint-down(xs) {
+    padding: 0;
+  }
+}
+
 #navbar-top {
   height: 60px;
-  top: -1px
+  top: -1px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  .navbar-nav {
+    flex-direction: row;
+
+    .nav-link {
+      padding-right: .5rem;
+      padding-left: .5rem;
+    }
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    width: 100%;
+  }
 }
 
 .card-title {
@@ -47,9 +70,29 @@ body {
 }
 
 .card-patent-basic {
-  margin-top: 20px;
 
-  &.sticky-top {
+  @include media-breakpoint-up(sm) {
+    margin-top: 20px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    border-radius: 0;
+  }
+
+  .card-title-block {
+    padding: $spacer*.75;
+
+    @include media-breakpoint-down(md) {
+      min-width: 11em;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: $spacer*.2;
+      min-width: 2.5em;
+    }
+  }
+
+   &.sticky-top {
     min-width: 300px;
     max-width: 100%;
     margin-top: 0;
@@ -59,10 +102,6 @@ body {
     .card-block-compact {
       margin-top: $spacer*.7
     }
-  }
-
-  .icon {
-    font-size: 1.5rem;
   }
 
   .list-group-item {
@@ -80,6 +119,14 @@ body {
     border-bottom: 1px dotted $gray-light;
   }
 
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .icon-barcode {
+    font-size: 24px;
+  }
+
   @include media-breakpoint-down(md) {
 
     .card-block-compact {
@@ -92,22 +139,15 @@ body {
     }
 
     .list-group-item {
-      padding: $spacer*.5;
+      padding: $spacer*.25;
       border: 0 none;
       flex-wrap: nowrap;
-
-      &:first-child {
-        flex-direction: row-reverse;
-      }
     }
 
-    .icon {
-      &:before {
-        width: $spacer*2;
-        display: inline-block;
-        text-align: center;
-        margin-right: $spacer*.5
-      }
+    .icon:before {
+      width: $spacer*2;
+      display: inline-block;
+      text-align: center;
     }
 
     .address {
@@ -120,12 +160,23 @@ body {
   padding: 0;
   .card-title {
     margin-bottom: 0;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    border-radius: 0;
   }
 }
 
 .navbar-brand {
   .icon {
     font-size: 2rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
   }
 }
 
